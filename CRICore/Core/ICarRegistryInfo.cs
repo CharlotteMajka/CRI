@@ -2,14 +2,14 @@
 {
     public interface ICarRegistryInfo
     {
-        bool validateNumberPlateAsync(string numberPlate);
+        bool validateNumberPlate(string numberPlate);
 
         string[] getModelInfo(string numberPlate);
 
-        string getFuelType(string numberPalte);
+        string getFuelType(string numberPlate);
 
-        int getWeight(string numberPalte);
+        int getWeight(string numberPlate);
 
-        int[] getEngineAmdTopSpeed(string numberPlate);
+        int[] getEngineAndTopSpeed(string numberPlate);
     }
 }
