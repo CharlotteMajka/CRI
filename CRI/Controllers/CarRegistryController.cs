@@ -20,7 +20,7 @@ namespace CRI.Controllers
         public bool validateNumberPalte([FromQuery] string numberPlate)
         {
 
-            return _service.validateNumberPlate(numberPlate);
+            return _service.validateNumberPlateAsync(numberPlate);
         }
 
 

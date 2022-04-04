@@ -2,7 +2,7 @@
 {
     public interface ICarRegistryInfo
     {
-        bool validateNumberPlate(string numberPlate);
+        bool validateNumberPlateAsync(string numberPlate);
 
         string[] getModelInfo(string numberPlate);
 
