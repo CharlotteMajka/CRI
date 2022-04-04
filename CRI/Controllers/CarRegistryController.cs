@@ -1,4 +1,5 @@
-﻿using CRI.Core;
+﻿
+using CRICore.Core;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CRI.Controllers

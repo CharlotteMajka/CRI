@@ -1,4 +1,4 @@
-﻿namespace CRI.Core
+﻿namespace CRICore.Core
 {
     public class CarRegistry : ICarRegistryInfo
     {

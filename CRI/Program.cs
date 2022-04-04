@@ -1,4 +1,4 @@
-using CRI.Core;
+using CRICore.Core;
 
 var builder = WebApplication.CreateBuilder(args);
 
