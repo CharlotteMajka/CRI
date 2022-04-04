@@ -6,6 +6,7 @@ namespace CRICore.Core
 {
     public class CarRegistry : ICarRegistryInfo
     {
+        private readonly string API_TOKEN = "";
         private RestClient _restClient;
         public CarRegistry(RestClient restClient)
         {
@@ -14,7 +15,7 @@ namespace CRICore.Core
 
         public int[] getEngineAndTopSpeed(string numberPlate)
         {
-            string url = $"http://api.nrpla.de/{numberPlate}?api_token=[API_TOKEN]";
+            string url = $"http://api.nrpla.de/{numberPlate}?api_token=[{API_TOKEN}]";
             var request = new RestRequest(url);
             request.Method = Method.Get;
 
@@ -35,7 +36,7 @@ namespace CRICore.Core
         public string getFuelType(string numberPlate)
         {
 
-            string url = $"http://api.nrpla.de/{numberPlate}?api_token=[API_TOKEN]";
+            string url = $"http://api.nrpla.de/{numberPlate}?api_token=[{API_TOKEN}]";
             var request = new RestRequest(url);
             request.Method = Method.Get;
 
@@ -54,7 +55,7 @@ namespace CRICore.Core
         public string[] getModelInfo(string numberPlate)
         {
 
-            string url = $"http://api.nrpla.de/{numberPlate}?api_token=[API_TOKEN]";
+            string url = $"http://api.nrpla.de/{numberPlate}?api_token=[{API_TOKEN}]";
             var request = new RestRequest(url);
             request.Method = Method.Get;
 
@@ -74,7 +75,7 @@ namespace CRICore.Core
 
         public int getWeight(string numberPlate)
         {
-            string url = $"http://api.nrpla.de/{numberPlate}?api_token=[API_TOKEN]";
+            string url = $"http://api.nrpla.de/{numberPlate}?api_token=[{API_TOKEN}]";
             var request = new RestRequest(url);
             request.Method = Method.Get;
 
@@ -92,7 +93,7 @@ namespace CRICore.Core
 
         public bool validateNumberPlate(string numberPlate)
         {
-            string url = $"http://api.nrpla.de/{numberPlate}?api_token=[API_TOKEN]";
+            string url = $"http://api.nrpla.de/{numberPlate}?api_token=[{API_TOKEN}]";
             var request = new RestRequest(url);
             request.Method = Method.Get;
 
