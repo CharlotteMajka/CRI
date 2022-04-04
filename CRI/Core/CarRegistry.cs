@@ -1,6 +1,6 @@
 ﻿namespace CRI.Core
 {
-    public class CarRegistrycs : ICarRegistryInfo
+    public class CarRegistry : ICarRegistryInfo
     {
         public int[] getEngineAmdTopSpeed(string numberPlate)
         {
