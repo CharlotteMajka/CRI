@@ -28,6 +28,11 @@ namespace CRICore.Core
 
             var result = JsonSerializer.Deserialize<data>(response.Content);
 
+            if (result == null || result.top_speed == 0 || result.engine_power == 0)
+            {
+                throw new Exception("Data cannot be found");
+            }
+
             var returnvalue = new int[] {result.engine_power, result.top_speed};
 
             return returnvalue;
@@ -49,6 +54,11 @@ namespace CRICore.Core
 
             var result = JsonSerializer.Deserialize<data>(response.Content);
 
+            if (result.fuel_type == null)
+            {
+                throw new Exception("Fuel type not found");
+            }
+
             return result.fuel_type;
         }
 
@@ -68,8 +78,12 @@ namespace CRICore.Core
 
             var result = JsonSerializer.Deserialize<data>(response.Content);
 
-            var returnvalue = new string[] {result.brand, result.model, result.version};
-
+            if (result == null)
+            {
+                var returnValueNull = new string[] { };
+                return returnValueNull;   
+            }
+            var returnvalue = new string[] { result.brand, result.model, result.version };
             return returnvalue;
         }
 
@@ -87,6 +101,11 @@ namespace CRICore.Core
             }
 
             var result = JsonSerializer.Deserialize<data>(response.Content);
+
+            if (result.vehicle_weight == 0 || result == null)
+            {
+                return 0;
+            }
 
             return result.vehicle_weight;
         }
